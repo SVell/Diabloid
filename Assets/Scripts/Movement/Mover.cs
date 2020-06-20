@@ -1,46 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Mover : MonoBehaviour
+namespace RPG.Movement
 {
-    private NavMeshAgent navMeshAgent;
-    private Animator anim;
-    
-    void Start()
+    public class Mover : MonoBehaviour, IAction
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
-    }
+        private NavMeshAgent navMeshAgent;
+        private Animator anim;
     
-    void Update()
-    {
-        if (Input.GetMouseButton(0))
+        void Start()
         {
-            MoveToCursor();
+            navMeshAgent = GetComponent<NavMeshAgent>();
+            anim = GetComponent<Animator>();
+        }
+    
+        void Update()
+        {
+            Animate();
         }
 
-        Animate();
-    }
-
-    private void MoveToCursor()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        bool hasHit = Physics.Raycast(ray, out hit);
-        if(hasHit)
+        public void StartMoveAction(Vector3 destination)
         {
-            navMeshAgent.destination = hit.point;
+            GetComponent<ActionScheduler>().StartAction(this);
+            MoveTo(destination);
         }
-    }
+        
+        public void MoveTo(Vector3 destination)
+        {
+            navMeshAgent.destination = destination;
+            navMeshAgent.isStopped = false;
+        }
 
-    private void Animate()
-    {
-        Vector3 velocity = navMeshAgent.velocity;
-        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
-        float speed = localVelocity.z;
-        anim.SetFloat("ForwardSpeed", speed);
+        public void Cancel()
+        {
+            navMeshAgent.isStopped = true;
+        }
 
+        private void Animate()
+        {
+            Vector3 velocity = navMeshAgent.velocity;
+            Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+            float speed = localVelocity.z;
+            anim.SetFloat("ForwardSpeed", speed);
+
+        }
     }
 }

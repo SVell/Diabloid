@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCamera : MonoBehaviour
+namespace RPG.Core
 {
-    public Camera cam;
-    public Transform target;
+    public class FollowCamera : MonoBehaviour
+    {
+        public Camera cam;
+        public Transform target;
     
-    // Start is called before the first frame update
-    void Start()
-    {
+        // Start is called before the first frame update
+        void Start()
+        {
         
-    }
+        }
 
-    // Update is called once per frame
-    void LateUpdate()
-    {
-        transform.position = target.position;
+        // Update is called once per frame
+        void LateUpdate()
+        {
+            transform.position = target.position;
+        }
     }
 }
