@@ -15,16 +15,20 @@
           <e p="Combat" t="Include">
             <e p="CombatTarget.cs" t="Include" />
             <e p="Fighter.cs" t="Include" />
-            <e p="Health.cs" t="Include" />
+          </e>
+          <e p="Control" t="Include">
+            <e p="AIController.cs" t="Include" />
+            <e p="PatrolPath.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
           </e>
           <e p="Core" t="Include">
             <e p="ActionScheduler.cs" t="Include" />
             <e p="FollowCamera.cs" t="Include" />
+            <e p="Health.cs" t="Include" />
             <e p="IAction.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
             <e p="Mover.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
           </e>
         </e>
       </e>
