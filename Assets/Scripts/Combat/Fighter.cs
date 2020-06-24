@@ -38,7 +38,7 @@ namespace RPG.Combat
             
             if (target != null && !IsInRange())
             {
-                mover.MoveTo(target.transform.position);
+                mover.MoveTo(target.transform.position,1f);
             }
             else
             {
@@ -91,6 +91,7 @@ namespace RPG.Combat
 
         public void Cancel()
         {
+            mover.Cancel();
             target = null;
             GetComponent<Animator>().SetTrigger("stopAttack");
             GetComponent<Animator>().ResetTrigger("attack");

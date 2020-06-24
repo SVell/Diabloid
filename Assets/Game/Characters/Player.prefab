@@ -12,6 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797dd4ef298b6bd4bae84d78a9d85334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &698186529
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452173392721055390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 2.0064769
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.87282825, z: 0}
 --- !u!1001 &4567773341440389296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19,25 +33,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1859130543, guid: 8c97af7459f16c44aaaa5f59a485826a, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
       propertyPath: healthPoints
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2392274713680117830, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.019210815
+      value: 32.011013
       objectReference: {fileID: 0}
     - target: {fileID: 2392274713680117830, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0000009536743
+      value: 6.239
       objectReference: {fileID: 0}
     - target: {fileID: 2392274713680117830, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.36169434
+      value: 28.954338
       objectReference: {fileID: 0}
     - target: {fileID: 2392274713680117830, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
