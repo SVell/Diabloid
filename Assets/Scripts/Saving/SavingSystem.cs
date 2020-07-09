@@ -12,56 +12,66 @@ namespace RPG.Saving
     {
         public void Save(string saveFile)
         {
+            Dictionary<string,object> state = LoadFile(saveFile);
+            CaptureState(state);
+            SaveFile(saveFile, state);
+        }
+
+        private void SaveFile(string saveFile, object state)
+        {
             string path = GetPathFromSaveFile(saveFile);
             print("Saving to " + path);
             // Will close file stream automatically
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
-                Transform playerTransform = GetPlayerTransform();
-
                 // Serialization and writing
                 BinaryFormatter formatter = new BinaryFormatter();
-                SerializableVector3 position = new SerializableVector3(playerTransform.position);
-                formatter.Serialize(stream, position);
+                formatter.Serialize(stream, state);
+            }
+        }
+
+        public void Load(string loadFile)
+        {
+            RestoreState(LoadFile(loadFile));
+        }
+
+        private Dictionary<string,object> LoadFile(string loadFile)
+        { 
+            string path = GetPathFromSaveFile(loadFile); 
+            if (!File.Exists(path))
+            {
+                return new Dictionary<string, object>();
+            }
+            print("Loading from " + path);
+           
+           using (FileStream stream = File.Open(path, FileMode.Open))
+           {
+               BinaryFormatter formatter = new BinaryFormatter();
+               return (Dictionary<string,object>)formatter.Deserialize(stream);
+           }
+        }
+
+
+        private void CaptureState(Dictionary<string,object> state)
+        {
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+            {
+                state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
             }
         }
         
-        public void Load(string loadFile)
+        private void RestoreState(Dictionary<string,object> state)
         {
-            string path = GetPathFromSaveFile(loadFile);
-            print("Loading from " + path);
-            
-            using (FileStream stream = File.Open(path, FileMode.Open))
+            Dictionary<string, object> stateDict = (Dictionary<string, object>) state;
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
             {
-                Transform playerTransform = GetPlayerTransform();
-                BinaryFormatter formatter = new BinaryFormatter();
-                SerializableVector3 position = (SerializableVector3)formatter.Deserialize(stream);
-                playerTransform.position = position.ToVector();
+                string id = saveable.GetUniqueIdentifier();
+                if (stateDict.ContainsKey(id))
+                {
+                    saveable.RestoreState(state[id]);
+                }
+                
             }
-        }
-
-        private byte[] SerializeVector(Vector3 vector)
-        {
-            // each 4 byte is a float
-            byte[] vectorBytes = new byte[3 * 4];
-            BitConverter.GetBytes(vector.x).CopyTo(vectorBytes,0);
-            BitConverter.GetBytes(vector.y).CopyTo(vectorBytes,4);
-            BitConverter.GetBytes(vector.z).CopyTo(vectorBytes,8);
-            return vectorBytes;
-        }
-
-        private Vector3 DeserializeVector(byte[] buffer)
-        {
-            Vector3 result = new Vector3();
-            result.x = BitConverter.ToSingle(buffer, 0);
-            result.y = BitConverter.ToSingle(buffer, 4);
-            result.z = BitConverter.ToSingle(buffer, 8);
-            return result;
-        }
-
-        private Transform GetPlayerTransform()
-        {
-            return GameObject.FindWithTag("Player").transform;
         }
 
         private string GetPathFromSaveFile(string saveFile)

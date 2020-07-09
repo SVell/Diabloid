@@ -42,6 +42,7 @@ namespace RPG.Movement
 
         public void Cancel()
         {
+            //navMeshAgent.enabled = !GetComponent<Health>().IsDead();
             navMeshAgent.isStopped = true;
         }
 

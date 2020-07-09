@@ -36,6 +36,7 @@
             <e p="Mover.cs" t="Include" />
           </e>
           <e p="Saving" t="Include">
+            <e p="SaveableEntity.cs" t="Include" />
             <e p="SavingSystem.cs" t="Include" />
             <e p="SavingWraper.cs" t="Include" />
             <e p="SerializableVector3.cs" t="Include" />
