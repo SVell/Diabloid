@@ -74,10 +74,10 @@
      <Compile Include="Assets\Scripts\Saving\ISaveable.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveableEntity.cs" />
      <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
-     <Compile Include="Assets\Scripts\Saving\SavingWrapper.cs" />
      <Compile Include="Assets\Scripts\Saving\SerializableVector3.cs" />
      <Compile Include="Assets\Scripts\SceneManagment\Fader.cs" />
      <Compile Include="Assets\Scripts\SceneManagment\Portal.cs" />
+     <Compile Include="Assets\Scripts\SceneManagment\SavingWrapper.cs" />
      <None Include="Assets\Asset Packs\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Diabloid/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

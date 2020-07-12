@@ -39,12 +39,12 @@
             <e p="ISaveable.cs" t="Include" />
             <e p="SaveableEntity.cs" t="Include" />
             <e p="SavingSystem.cs" t="Include" />
-            <e p="SavingWrapper.cs" t="Include" />
             <e p="SerializableVector3.cs" t="Include" />
           </e>
           <e p="SceneManagment" t="Include">
             <e p="Fader.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
+            <e p="SavingWrapper.cs" t="Include" />
           </e>
         </e>
       </e>
