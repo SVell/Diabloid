@@ -1,0 +1,60 @@
+﻿using RPG.Core;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+namespace RPG.Combat
+{
+    [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make new Weapon", order = 0)]
+    public class Weapon : ScriptableObject
+    {
+        [FormerlySerializedAs("weaponPrefab")] [SerializeField] private GameObject equippedPrefab = null;
+        [FormerlySerializedAs("weaponOverride")] [SerializeField] private AnimatorOverrideController animatorOverride = null;
+        [SerializeField] private Projectile projectile = null;
+        [SerializeField] private float weaponDamage = 5;
+        [SerializeField] private float weaponRange = 2;
+        [SerializeField] private bool isRightHanded = true;
+
+        public void Spawn(Transform rightHand, Transform leftHand,Animator animator)
+        {
+            if (equippedPrefab != null)
+            {
+                Instantiate(equippedPrefab, GetTransform(rightHand, leftHand));
+            }
+            if (animatorOverride != null)
+            {
+                animator.runtimeAnimatorController = animatorOverride;
+            }
+        }
+
+        private Transform GetTransform(Transform rightHand, Transform leftHand)
+        {
+            Transform handTransform;
+            
+            if (isRightHanded) handTransform = rightHand;
+            else handTransform = leftHand;
+            
+            return handTransform;
+        }
+
+        public bool HasProjectile()
+        {
+            return projectile != null;
+        }
+
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        {
+            Projectile projectileInstance = Instantiate(projectile, GetTransform(rightHand, rightHand).position, Quaternion.identity);
+            projectileInstance.SetTarget(target,weaponDamage);
+        }
+
+        public float GetDamage()
+        {
+            return weaponDamage;
+        }
+        
+        public float GetRange()
+        {
+            return weaponRange;
+        }
+    }
+}

@@ -62,6 +62,9 @@
      <Compile Include="Assets\Scripts\Cinematics\CinematicsComtrolRemover.cs" />
      <Compile Include="Assets\Scripts\Combat\CombatTarget.cs" />
      <Compile Include="Assets\Scripts\Combat\Fighter.cs" />
+     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Combat\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\Control\AIController.cs" />
      <Compile Include="Assets\Scripts\Control\PatrolPath.cs" />
      <Compile Include="Assets\Scripts\Control\PlayerController.cs" />
