@@ -10,6 +10,11 @@
           <e p="Animations by Explosive" t="Include">
             <e p="README - Usage Rights for these assets 1.txt" t="Include" />
           </e>
+          <e p="SimpleFX" t="Include">
+            <e p="Materials" t="Include">
+              <e p="UnlitVertexColour_Alpha.shader" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="Cinematics" t="Include">
@@ -30,6 +35,7 @@
           </e>
           <e p="Core" t="Include">
             <e p="ActionScheduler.cs" t="Include" />
+            <e p="DestroyAfterEffect.cs" t="Include" />
             <e p="FollowCamera.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="IAction.cs" t="Include" />

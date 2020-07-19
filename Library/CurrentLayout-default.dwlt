@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 110
+  controlID: 122
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 111
+  controlID: 123
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 18
+  controlID: 124
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1486
+  m_LastSelectedObjectID: -43406
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -478,7 +478,7 @@ MonoBehaviour:
     x: 350
     y: 119
     width: 1179
-    height: 581
+    height: 550
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &17
 MonoBehaviour:
@@ -519,20 +519,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Game/Weapons/Bow
+    - Assets/Game/PickUps
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Game/Weapons/Bow
+  - Assets/Game/PickUps
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\Diabloid
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 199}
-    m_SelectedIDs: 00fd0000
-    m_LastClickedID: 64768
-    m_ExpandedIDs: 000000009a3c00009c3c00009e3c0000a03c0000a23c0000a43c0000a63c0000d43c00002429010000ca9a3b
+    scrollPos: {x: 0, y: 271}
+    m_SelectedIDs: e83e0000
+    m_LastClickedID: 16104
+    m_ExpandedIDs: 00000000843e0000863e0000883e00008a3e0000923e0000943e0000d03e00009c6e010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -560,7 +560,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a3c00009c3c00009e3c0000a03c0000a23c0000a43c0000a63c0000
+    m_ExpandedIDs: 00000000843e0000863e0000883e00008a3e00008c3e00008e3e0000903e0000923e0000943e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -604,7 +604,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 3}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -683,9 +683,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 92acfdff
-      m_LastClickedID: -152430
-      m_ExpandedIDs: 92acfdffa2acfdff
+      m_SelectedIDs: 6e360000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 069ffeff48a1feff90a1feff70a4feff52acfeff7eaefeffc6aefeff6eb9feff46cefeffc0dbfeff24e1feff6ce1feffdceefefffef1feff46f2feffa6fcfeff6e7affff9af3ffff6cfbfffff4ffffff6c350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -738,16 +738,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: a0f313eb72830d74f958e5ad5e5bccc1
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 27.647146, y: 7.1107464, z: 15.117351}
+    m_Target: {x: -36.756638, y: -64.96211, z: -16.591553}
     speed: 2
-    m_Value: {x: 27.647146, y: 7.1107464, z: 15.117351}
+    m_Value: {x: -36.756638, y: -64.96211, z: -16.591553}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -793,20 +793,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.18822142, y: -0.74425036, z: 0.23562291, w: 0.5961213}
+    m_Target: {x: 0.16397247, y: -0.82801956, z: 0.31215283, w: 0.43620253}
     speed: 2
-    m_Value: {x: 0.18820123, y: -0.7441705, z: 0.23559764, w: 0.59605736}
+    m_Value: {x: 0.16395482, y: -0.82793045, z: 0.31211925, w: 0.4361556}
   m_Size:
-    m_Target: 2.787249
+    m_Target: 60.9064
     speed: 2
-    m_Value: 2.787249
+    m_Value: 60.9064
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.9
-    m_SpeedNormalized: 0.4674874
+    m_Speed: 1
+    m_SpeedNormalized: 0.49748746
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 722
+    y: 690
     width: 1530
-    height: 317
+    height: 349
   m_ViewDataDictionary: {fileID: 0}

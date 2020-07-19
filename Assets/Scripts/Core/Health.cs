@@ -31,6 +31,7 @@ namespace RPG.Core
         {
             if(isDead) return;
             isDead = true;
+            //GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }
