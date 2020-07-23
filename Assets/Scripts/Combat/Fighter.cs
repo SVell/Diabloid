@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using RPG.Core;
+﻿using RPG.Core;
 using RPG.Movement;
+using RPG.Resources;
 using RPG.Saving;
 using UnityEngine;
 
@@ -61,7 +60,11 @@ namespace RPG.Combat
                 AttackBehaviour();
             }
         }
-        
+
+        public Health GetTarget()
+        {
+            return target;
+        } 
         
         private void AttackBehaviour()
         {
@@ -131,7 +134,7 @@ namespace RPG.Combat
         public void RestoreState(object state)
         {
             string weaponName = (string) state;
-            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
         }
     }

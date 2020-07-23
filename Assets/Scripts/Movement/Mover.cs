@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using RPG.Core;
+using RPG.Resources;
 using RPG.Saving;
 using UnityEngine;
 using UnityEngine.AI;
