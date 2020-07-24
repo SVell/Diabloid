@@ -87,7 +87,7 @@ namespace RPG.Combat
         private void Hit()
         {
             if(target == null) return;
-            target.TakeDamage(currentWeapon.GetDamage());
+            target.TakeDamage(gameObject,currentWeapon.GetDamage());
         }
         
         // Animation Event
@@ -96,7 +96,7 @@ namespace RPG.Combat
             if(target == null) return;
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform,leftHandTransform, target);
+                currentWeapon.LaunchProjectile(rightHandTransform,leftHandTransform, target, gameObject);
             }
         }
 
