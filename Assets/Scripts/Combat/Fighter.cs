@@ -1,12 +1,14 @@
-﻿using RPG.Core;
+﻿using System.Collections.Generic;
+using RPG.Core;
 using RPG.Movement;
 using RPG.Resources;
 using RPG.Saving;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Combat
 {
-    public class Fighter : MonoBehaviour, IAction, ISaveable
+    public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
     {
         [SerializeField] private Transform rightHandTransform = null;
         [SerializeField] private Transform leftHandTransform = null;
@@ -87,17 +89,22 @@ namespace RPG.Combat
         private void Hit()
         {
             if(target == null) return;
-            target.TakeDamage(gameObject,currentWeapon.GetDamage());
+            float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
+            
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(rightHandTransform,leftHandTransform, target, gameObject,damage);
+            }
+            else
+            {
+                target.TakeDamage(gameObject,damage);
+            }
         }
         
         // Animation Event
         private void Shoot()
         {
-            if(target == null) return;
-            if (currentWeapon.HasProjectile())
-            {
-                currentWeapon.LaunchProjectile(rightHandTransform,leftHandTransform, target, gameObject);
-            }
+            Hit();
         }
 
         private bool IsInRange()
@@ -124,6 +131,14 @@ namespace RPG.Combat
             target = null;
             GetComponent<Animator>().SetTrigger("stopAttack");
             GetComponent<Animator>().ResetTrigger("attack");
+        }
+        
+        public IEnumerable<float> GetAdditiveModifier(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return currentWeapon.GetDamage();
+            }
         }
 
         public object CaptureState()
