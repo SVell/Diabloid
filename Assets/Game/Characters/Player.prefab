@@ -57,6 +57,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2457608166976937142, guid: de51cf8f96a89d847939f6532f3d7384,
         type: 3}
+    - target: {fileID: -4138463658008037813, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1859130543, guid: 8c97af7459f16c44aaaa5f59a485826a, type: 3}
       propertyPath: weaponDamage
       value: 10

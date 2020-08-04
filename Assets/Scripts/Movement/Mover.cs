@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using RPG.Core;
@@ -15,13 +16,13 @@ namespace RPG.Movement
         
         private NavMeshAgent navMeshAgent;
         private Animator anim;
-    
-        void Start()
+
+        private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             anim = GetComponent<Animator>();
         }
-    
+
         void Update()
         {
             navMeshAgent.enabled = !GetComponent<Health>().IsDead();
