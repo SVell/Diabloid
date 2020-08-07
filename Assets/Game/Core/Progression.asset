@@ -59,6 +59,13 @@ MonoBehaviour:
       - 11
       - 13
       - 14
+    - stat: 1
+      levels:
+      - 1000
+      - 1000
+      - 1000
+      - 1000
+      - 1000
   - characterClass: 3
     stats:
     - stat: 0
@@ -75,3 +82,10 @@ MonoBehaviour:
       - 34
       - 38
       - 43
+    - stat: 1
+      levels:
+      - 1000
+      - 1000
+      - 1000
+      - 1000
+      - 1000
