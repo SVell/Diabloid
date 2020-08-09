@@ -2,9 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using RPG.Core;
-using RPG.Resources;
+using RPG.Attributes;
 using UnityEditor.Presets;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace RPG.Combat
@@ -17,6 +18,7 @@ namespace RPG.Combat
         [SerializeField] private float maxLifeTime = 10f;
         [SerializeField] private float lifeAfterImpact = 2f;
         [SerializeField] private GameObject[] destroyOnHit = null;
+        [SerializeField] private UnityEvent onHit;
         
         
         Health target = null;
@@ -59,7 +61,9 @@ namespace RPG.Combat
             if (other.GetComponent<Health>() != target) return;
             if(target.IsDead()) return;
             target.TakeDamage(instigator,damage);
-    
+            
+            onHit.Invoke();
+            
             speed = 0;
             
             if (hitEffect != null)

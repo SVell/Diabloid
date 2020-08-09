@@ -2,11 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine.Utility;
+using RPG.Attributes;
 using RPG.Combat;
 using RPG.Core;
 using UnityEngine;
 using RPG.Movement;
-using RPG.Resources;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 

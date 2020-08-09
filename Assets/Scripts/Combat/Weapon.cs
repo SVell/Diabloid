@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using RPG.Core;
-using RPG.Resources;
+using RPG.Attributes;
 using UnityEngine;
 using UnityEngine.Serialization;
 
