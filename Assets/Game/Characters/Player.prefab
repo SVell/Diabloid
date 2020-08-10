@@ -11,7 +11,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3
-  m_Height: 2.0064769
+  m_Height: 1.74
   m_Direction: 1
   m_Center: {x: 0, y: 0.87282825, z: 0}
 --- !u!114 &1073138507607553736
@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797dd4ef298b6bd4bae84d78a9d85334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastRadius: 0.5
   cursorMappings:
   - type: 0
     texture: {fileID: 2800000, guid: 21628736160fcc9488493401da3ef621, type: 3}
@@ -55,6 +56,7 @@ MonoBehaviour:
   - type: 4
     texture: {fileID: 2800000, guid: f8c873f1e53e83f4aabf342d6be1dfc3, type: 3}
     hotspot: {x: 0, y: 0}
+  maxNavMeshProjectionDistance: 1
 --- !u!1001 &4567773341440389296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,6 +111,11 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 7769431599245736196}
+    - target: {fileID: 1859130543, guid: 8c97af7459f16c44aaaa5f59a485826a, type: 3}
+      propertyPath: defaultWeaponConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 3156edb2ba68de141b65ed1d9551b136,
+        type: 2}
     - target: {fileID: 2102743921, guid: 8c97af7459f16c44aaaa5f59a485826a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -117,6 +124,16 @@ PrefabInstance:
         type: 3}
       propertyPath: healthPoints
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808773222716126346, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123683751339703780, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2392274713680117830, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}

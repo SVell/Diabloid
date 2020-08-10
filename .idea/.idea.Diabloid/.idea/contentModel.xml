@@ -10,6 +10,13 @@
           <e p="Animations by Explosive" t="Include">
             <e p="README - Usage Rights for these assets 1.txt" t="Include" />
           </e>
+          <e p="BOXOPHOBIC" t="Include">
+            <e p="Skybox Cubemap Extended" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="Skybox Cubemap Extended.shader" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="GameDev.tv Assets" t="Include">
             <e p="Scripts" t="Include">
               <e p="Utils" t="Include">
@@ -21,6 +28,38 @@
             <e p="Materials" t="Include">
               <e p="UnlitVertexColour_Alpha.shader" t="Include" />
             </e>
+          </e>
+          <e p="SimpleSky" t="Include">
+            <e p="ReadMe.txt" t="Include" />
+          </e>
+          <e p="Standard Assets" t="Include">
+            <e p="Environment" t="Include">
+              <e p="Water" t="Include">
+                <e p="Water" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Displace.cs" t="Include" />
+                    <e p="GerstnerDisplace.cs" t="Include" />
+                    <e p="MeshContainer.cs" t="Include" />
+                    <e p="PlanarReflection.cs" t="Include" />
+                    <e p="SpecularLighting.cs" t="Include" />
+                    <e p="Water.cs" t="Include" />
+                    <e p="WaterBase.cs" t="Include" />
+                    <e p="WaterTile.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="FXWaterPro.shader" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Synty - Polygon Student Sample" t="Include">
+            <e p="Use" t="Include">
+              <e p="Important README.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Synty - Polygon Student Sample 1" t="Include">
+            <e p="README - Usage Rights for these assets.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -39,6 +78,7 @@
             <e p="Fighter.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
+            <e p="WeaponConfig.cs" t="Include" />
             <e p="WeaponPickup.cs" t="Include" />
           </e>
           <e p="Control" t="Include">

@@ -214,6 +214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
       propertyPath: health
       value: 20
       objectReference: {fileID: 0}
@@ -222,10 +227,35 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 7862855476533504014}
+    - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049103025287433855, guid: 8c97af7459f16c44aaaa5f59a485826a,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1808773222716126346, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2392274713680117830, guid: 8c97af7459f16c44aaaa5f59a485826a,
         type: 3}

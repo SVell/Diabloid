@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7370cc1e53f166489245c4a6a719aca, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  equippedPrefab: {fileID: 3130572761869948106, guid: 779cc0fe367b05a4681b5d840cbdfe18,
+  equippedPrefab: {fileID: 3076202157170623948, guid: 779cc0fe367b05a4681b5d840cbdfe18,
     type: 3}
   animatorOverride: {fileID: 22100000, guid: 0e3ff0703e540ea41b597f115d41136a, type: 2}
   projectile: {fileID: 2826714300462319210, guid: 1060d4abbad0cff45b323e120ab3ff9d,

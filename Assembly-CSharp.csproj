@@ -59,6 +59,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\LazyValue.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\Scripts\Attributes\Health.cs" />
      <Compile Include="Assets\Scripts\Attributes\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Attributes\HealthDisplay.cs" />
@@ -69,6 +77,7 @@
      <Compile Include="Assets\Scripts\Combat\Fighter.cs" />
      <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
      <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Combat\WeaponConfig.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\Control\AIController.cs" />
      <Compile Include="Assets\Scripts\Control\CursorType.cs" />
@@ -99,8 +108,13 @@
      <Compile Include="Assets\Scripts\Stats\Stats.cs" />
      <Compile Include="Assets\Scripts\UI\DamageText\DamageText.cs" />
      <Compile Include="Assets\Scripts\UI\DamageText\DamageTextSpawner.cs" />
+     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample 1\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+     <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
      <None Include="Assets\Asset Packs\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
+     <None Include="Assets\Asset Packs\SimpleSky\ReadMe.txt" />
+     <None Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\Use\Important README.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Diabloid/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

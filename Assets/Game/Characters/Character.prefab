@@ -182,7 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHandTransform: {fileID: 0}
   leftHandTransform: {fileID: 0}
-  defaultWeapon: {fileID: 11400000, guid: 3156edb2ba68de141b65ed1d9551b136, type: 2}
+  defaultWeaponConfig: {fileID: 11400000, guid: 3156edb2ba68de141b65ed1d9551b136,
+    type: 2}
   defaultWeaponName: Unarmed
   timeBetweenAttacks: 1
 --- !u!114 &1859130544

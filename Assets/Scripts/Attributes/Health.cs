@@ -129,5 +129,10 @@ namespace RPG.Attributes
                 Die();
             }
         }
+
+        public void Heal(float healthToRestore)
+        {
+            healthPoints.value = Mathf.Min(healthPoints.value + healthToRestore, GetMaxHealthPoints());
+        }
     }
 }

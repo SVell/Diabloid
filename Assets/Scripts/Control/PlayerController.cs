@@ -22,10 +22,10 @@ namespace RPG.Control
             public Vector2 hotspot;
         }
 
+        [SerializeField] private float raycastRadius = 1f;
         [SerializeField] private CursorMapping[] cursorMappings = null;
-        [SerializeField] private float maxNavMeshProjectionDistance = 1f;
-        [SerializeField] private float maxNavPathLength = 40f;
-        
+        [SerializeField] private float maxNavMeshProjectionDistance = 0.5f;
+
         private Mover mover;
         private Fighter fighter;
         private Health health;
@@ -73,7 +73,7 @@ namespace RPG.Control
 
         RaycastHit[] RaycastAllSorted()
         {
-            RaycastHit[] hits = Physics.RaycastAll(ScreenPointToRay());
+            RaycastHit[] hits = Physics.SphereCastAll(ScreenPointToRay(),raycastRadius);
             float[] distances = new float[hits.Length];
             for (int i = 0; i < distances.Length; i++)
             {
@@ -100,6 +100,8 @@ namespace RPG.Control
             bool hasHit = RaycastNavMesh(out target);
             if(hasHit)
             {
+                if (!GetComponent<Mover>().CanMoveTo(target)) return false;
+                
                 if (Input.GetMouseButton(0))
                 {
                     mover.StartMoveAction(target,1f);
@@ -126,26 +128,7 @@ namespace RPG.Control
             
             target = navMeshHit.position;
 
-            NavMeshPath path = new NavMeshPath();
-            bool hasPath = NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, path);
-            if (!hasPath) return false;
-            if (path.status != NavMeshPathStatus.PathComplete) return false;
-            if (GetPathLength(path) > maxNavPathLength) return false;
-            
             return true;
-        }
-
-        private float GetPathLength(NavMeshPath path)
-        {
-            float total = 0f;
-
-            if (path.corners.Length < 2) return total;
-            for (int i = 0; i < path.corners.Length - 1; i++)
-            {
-                total += Vector3.Distance(path.corners[i], path.corners[i + 1]);
-            }
-
-            return total;
         }
 
         private void SetCursor(CursorType type)
